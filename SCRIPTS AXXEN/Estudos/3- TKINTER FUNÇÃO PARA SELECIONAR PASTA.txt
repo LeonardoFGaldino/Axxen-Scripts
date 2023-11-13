@@ -1,0 +1,4 @@
+def selecionar_pasta():
+    global pasta_pdf
+    pasta_pdf = filedialog.askdirectory()
+    pasta_label.config(text=f"Pasta com PDFs: {pasta_pdf}")

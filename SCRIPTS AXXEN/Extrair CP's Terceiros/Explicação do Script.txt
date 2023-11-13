@@ -1,0 +1,21 @@
+*Função do Previdenciário
+
+Esse script extrai todos os valores do CP TERCEIROS  da do Comprovante de Arrecadação DARF .PDF para uma planilha em Excel
+contendo o periodo, código, descrição, valor, e nome do arquivo.
+
+Códigos:
+
+1170
+1176
+1181
+1184
+1200
+
+
+
+Modelo de código: estrutura diferente!
+
+*Esse script extrai vários Arquivos PDF's dentro de 1 PDF.
+
+
+OBS: IR ADICIONANDO CÓDIGOS CONFORME FOR APARECENDO

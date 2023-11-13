@@ -1,0 +1,4 @@
+def selecionar_pasta_destino():
+    global pasta_destino
+    pasta_destino = filedialog.askdirectory()
+    pasta_destino_label.config(text=f"Pasta de Destino: {pasta_destino}")

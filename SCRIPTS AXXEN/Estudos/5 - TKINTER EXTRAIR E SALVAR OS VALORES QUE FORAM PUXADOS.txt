@@ -1,0 +1,16 @@
+def extrair_e_salvar():
+    informacoes_pdf = []
+
+    for arquivo in os.listdir(pasta_pdf):
+        if arquivo.endswith('.pdf'):
+            pdf_path = os.path.join(pasta_pdf, arquivo)
+            cp_terceiros, cp_segurados, cp_patronal, IRRF, IRPJ, CSLL, PASEP, COFINS, Valor_do_Pedido, CNPJ, Número_do_Documento, Número_da_Declaração = extrair_valores_cp(
+                pdf_path)
+            informacoes_pdf.append((arquivo, cp_terceiros, cp_segurados, cp_patronal, IRRF, IRPJ, CSLL, PASEP, COFINS,
+                                    Valor_do_Pedido, CNPJ, Número_do_Documento, Número_da_Declaração))
+
+    df = pd.DataFrame(
+        informacoes_pdf,
+        columns=["Nome do Arquivo", "CP TERCEIROS", "CP SEGURADOS", "CP PATRONAL", "IRRF", "IRPJ", "CSLL", "PIS/PASEP",
+                 "COFINS", "Valor do Pedido", "CNPJ", "Número do Documento", "Número da Declaração"]
+    )

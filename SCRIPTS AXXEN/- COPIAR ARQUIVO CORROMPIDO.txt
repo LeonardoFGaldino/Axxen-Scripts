@@ -1,0 +1,24 @@
+COPIAR ARQUIVO:
+
+cp "Arquivo_Corrompido.xlsx" "Arquivo_novo.xslx"
+
+
+
+
+COPIAR PASTA: (FLAG)
+
+mkdir nova_pasta
+
+cp -r pasta/ nova_pasta
+
+
+
+
+MOVER PASTA:
+
+mv pasta nova_pasta
+
+
+
+
+

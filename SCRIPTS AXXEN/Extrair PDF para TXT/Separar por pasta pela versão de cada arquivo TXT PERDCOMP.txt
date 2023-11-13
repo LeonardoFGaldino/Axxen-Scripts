@@ -1,0 +1,28 @@
+import os
+import re
+import shutil
+
+# Passo 1: Pegar a pasta que contém os arquivos TXT de PERDCOMP
+pasta_origem = 'C:\\Users\\Admin\\Desktop\\PASTASAIDA'  # Substitua pelo caminho da sua pasta
+
+# Passo 2: Separar por pasta pela versão de cada arquivo TXT PERDCOMP
+for arquivo in os.listdir(pasta_origem):
+    if arquivo.endswith('.txt') and 'PERDCOMP' in arquivo:
+        # Extrair a versão do arquivo
+        with open(os.path.join(pasta_origem, arquivo), 'r', encoding='utf-8') as file:
+            conteudo = file.read()
+            match = re.search(r'PERDCOMP\s+(\d+\.\d+)', conteudo)
+            if match:
+                versao = match.group(1)
+            else:
+                versao = 'Versao_Nao_Encontrada'
+
+        # Criar a pasta de destino com base na versão
+        pasta_destino = os.path.join(pasta_origem, versao)
+        if not os.path.exists(pasta_destino):
+            os.mkdir(pasta_destino)
+
+        # Mover o arquivo para a pasta de destino
+        shutil.move(os.path.join(pasta_origem, arquivo), os.path.join(pasta_destino, arquivo))
+
+print('Arquivos movidos com sucesso!')

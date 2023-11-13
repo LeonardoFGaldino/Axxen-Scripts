@@ -1,0 +1,1 @@
+O script transforma os dados de um PDF em Arquivo de Texte TXT. Usando o PDFreader

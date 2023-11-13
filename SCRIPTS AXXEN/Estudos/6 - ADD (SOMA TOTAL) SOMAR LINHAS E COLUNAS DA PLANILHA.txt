@@ -1,0 +1,14 @@
+colunas_numericas = df.columns[1:]
+
+    df[colunas_numericas] = df[colunas_numericas].apply(pd.to_numeric, errors='coerce').fillna(0)
+
+
+    df['Soma Total'] = df[colunas_numericas].sum(axis=1)
+
+    total_geral = sum(list(df['Soma Total']))
+
+    qnty_cols = len(df.columns)
+    ultima_linha = [''] * qnty_cols
+    ultima_linha[-1] = total_geral
+    df.loc['Total Geral'] = ultima_linha
+    df[colunas_numericas] = df[colunas_numericas].apply(lambda valor: valor.replace(0, ''))

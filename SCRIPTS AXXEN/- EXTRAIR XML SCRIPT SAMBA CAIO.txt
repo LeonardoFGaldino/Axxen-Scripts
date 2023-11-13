@@ -1,0 +1,74 @@
+[leo@srv-dados ~]$ cd /home/samba/caio/scripts/extrair_produtos_cfes/
+
+[leo@srv-dados extrair_produtos_cfes]$ source .venv/bin/activate
+
+(.venv) [leo@srv-dados extrair_produtos_cfes]$ python parse_cfes_nfes_xml.py -h
+
+(.venv) [leo@srv-dados extrair_produtos_cfes]$ python parse_cfes_nfes_xml.py
+
+(.venv) [leo@srv-dados extrair_produtos_cfes]$ cd /home/samba/dados/13\ -\ PROJETOS/013.025/SIMPLES\ NACIONAL/XML/
+
+
+
+EXTRAIR ZIP:
+
+for f in *.zip; do unzip "$f"; done
+
+
+
+PARA EXTRAIR ZIP DENTRO DE ZIP
+
+find .. -iname "*.zip" -exec unzip {} \;
+
+
+MOVER TUDO QUE FOR ARQUIVO ZIP OU XML:
+
+find . -iname "*.zip" -exec mv {} ./ \;
+find . -iname "*.xml" -exec mv {} ./ \;
+
+./
+../
+
+copiar arquivos xml para uma pasta especifica:
+
+find . -iname "*.xml" -exec cp {} /caminho/para/a/pasta/destino/ \;
+
+
+entrar no script: 
+
+cd /home/samba/caio/scripts/extrair_produtos_cfes/
+
+e depois extrair:
+
+
+
+python parse_cfes_nfes_xml.py  -d /home/samba/dados/13\ -\ PROJETOS/001.178/SIMPLES\ NACIONAL/XML/ -o /home/samba/dados/13\ -\ PROJETOS/001.178/SIMPLES\ NACIONAL/XML/relatorio_xmls.csv
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+for f in *.rar; do unrar "$f"; done
+for f in *.rar; do unrar x "$f"; done
+
+
+
+
+find . -type f -exec mv {} ../arquivos_extraidos \;
+
+
+
+
+
+HD:
+
+cd /hd_dados_4TB/samba/publica/
+
+
+
+
+
+
+

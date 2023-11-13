@@ -1,0 +1,14 @@
+    if not pasta_destino:
+        resultado_label.config(text="Por favor, selecione uma pasta de destino.")
+        return
+
+    nome_arquivo = nome_arquivo_entry.get().strip()
+
+    if not nome_arquivo:
+        resultado_label.config(text="Por favor, insira um nome de arquivo.")
+        return
+
+    if not nome_arquivo.endswith(".xlsx"):
+        nome_arquivo += ".xlsx"
+
+    excel_filename = os.path.join(pasta_destino, nome_arquivo)

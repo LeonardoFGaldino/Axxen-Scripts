@@ -1,0 +1,2 @@
+pyinstaller --onefile -w -noconsole script_teste_guias.py
+pyinstaller oconsole.spec

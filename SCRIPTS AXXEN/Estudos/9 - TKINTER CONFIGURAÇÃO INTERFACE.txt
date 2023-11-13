@@ -1,0 +1,23 @@
+root = tk.Tk()
+root.title("Extração de Valores de PDF")
+
+selecionar_button = tk.Button(root, text="Selecionar Pasta com PDFs", command=selecionar_pasta)
+selecionar_destino_button = tk.Button(root, text="Selecionar Pasta de Destino", command=selecionar_pasta_destino)
+extrair_button = tk.Button(root, text="Extrair e Salvar", command=extrair_e_salvar, width=50)
+pasta_label = tk.Label(root, text="Pasta com PDFs não selecionada.")
+pasta_destino_label = tk.Label(root, text="Pasta de Destino não selecionada.")
+resultado_label = tk.Label(root, text="")
+
+nome_arquivo_label = tk.Label(root, text="Nome do arquivo de saída:")
+nome_arquivo_entry = Entry(root)
+
+selecionar_button.pack()
+selecionar_destino_button.pack()
+pasta_label.pack()
+pasta_destino_label.pack()
+nome_arquivo_label.pack()
+nome_arquivo_entry.pack()
+extrair_button.pack()
+resultado_label.pack()
+
+root.mainloop()

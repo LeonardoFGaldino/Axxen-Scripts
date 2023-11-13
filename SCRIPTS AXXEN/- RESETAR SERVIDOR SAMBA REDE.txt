@@ -1,0 +1,3 @@
+systemctl restart smb.service
+
+Axxen*.2023

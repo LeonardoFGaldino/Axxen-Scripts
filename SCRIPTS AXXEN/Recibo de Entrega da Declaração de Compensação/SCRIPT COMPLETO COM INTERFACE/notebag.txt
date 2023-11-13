@@ -1,0 +1,13 @@
+ 'MINISTÉRIO DA ECONOMIA\nSECRETARIA ESPECIAL DA RECEITA FEDERAL DO BRASIL\nRELATÓRIO DA DECLARAÇÃO COMPLETA - DCTFWeb\nNome do Contribuinte SALES CISCOTTO CONSTRUCOES LTDA
+\nCNPJ 17.391.122/0001-59\nPeríodo apuração 10/2021\nNúmero do Recibo 50000052297594\nData/Hora da Transmissão 23/05/2022 15:21:21\nIdentificação da Apuração de\nDébitos\n25269634 
+/ Reinf CP\n14269888586 / eSocial\nDados Iniciais\nClassificação Tributária 2-Empresa enquadrada no regime de tributação Simples com tributação\nprevidenciária não substituída\nNúm
+ero do Recibo da Declaração Retificada 50000011050933\nMissão Diplomática ou Repartição Consular 0 - Sem acordo\nAusência de Fatos Geradores Não\nEndereço\nLogradouro OTAVIO FERNAN
+DES COELHO\nNúmero 110\nComplemento -\nBairro/Distrito AEROPORTO\nMunicípio Juiz De Fora\nUF MG\nCEP 36038333\nTelefone 3233213310\nCorreio Eletrônico CONTATO@ARTTECCONSTRUCOES.COM
+.BR\nDados do Representante do Contribuinte e do Responsável pelo Preenchimento\nRepresentante GUILHERME CISCOTTO ALHADAS DE\nSALES\nCPF 10952116685\nTelefone 00000000\nCorreio Ele
+trônico -\nResponsável pelo\nPreenchimento THIAGO BARBOSA DE SOUZA RAMOS\nCPF 11555018700\nCRC -\nUF -\nTelefone 3230313548\nCorreio Eletrônico thiago@htccontabilidade.com.br\nDébi
+to Apurado e Crédito Vinculado\nCódigo da Receita 1082-01\nDescrição CP SEGURADOS - EMPREGADOS/AVULSO\nPeríodo Apuração Débito\nDébito Apurado 2.239,43\nDeduções Salário Família: 2
+0,51\nRetenção Lei 9711/98: 2.218,92\nSaldo a Pagar 0,00\nDébito Apurado e Crédito Vinculado\nCódigo da Receita 1099-01\nDescrição CP SEGURADOS - CONTRIBUINTES INDIVIDUAIS - 11%\nP
+eríodo Apuração Débito\nDébito Apurado 121,00\nDeduções Retenção Lei 9711/98: 121,00\nSaldo a Pagar 0,00\nDébito Apurado e Crédito Vinculado\nCódigo da Receita 1138-01\nDescrição C
+P PATRONAL - EMPREGADOS/AVULSOS\nPeríodo Apuração Débito\nDébito Apurado 5.690,39\nDeduções Retenção Lei 9711/98: 5.690,39\nSaldo a Pagar 0,00\nDébito Apurado e Crédito Vinculado\n
+Código da Receita 1138-04\nDescrição CP PATRONAL - CONTRIBUINTES INDIVIDUAIS\nPeríodo Apuração Débito\nDébito Apurado 220,00\nDeduções Retenção Lei 9711/98: 220,00\nSaldo a Pagar 0
+,00\nDébito Apurado e Crédito Vinculado\nCódigo da Receita 1646-01\nDescrição CP PATRONAL - GILRAT AJUSTADO\nPeríodo Apuração Débito\nDébito Apurado 1.569,60\nDeduções Retenção Lei 9711/98: 1.569,60\nSaldo a Pagar 0,00\n'

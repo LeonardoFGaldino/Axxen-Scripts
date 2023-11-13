@@ -1,0 +1,1 @@
+O script busca todas as linhas C197 do Arquivo SPED EM TXT.

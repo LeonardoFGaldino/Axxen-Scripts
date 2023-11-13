@@ -1,0 +1,27 @@
+import fitz
+from glob import glob
+
+
+
+files = glob('C:\\Users\\Admin\\Desktop\\TESTE\\*.pdf', recursive=True)
+
+
+f = files[0] 
+
+f
+
+'C:\\Users\\Admin\\Desktop\\TESTE\\GuiaPagamento_AIMEE.pdf'
+
+
+doc = fitz.open(f) 
+
+t = '\n'.join(p.get_text() for p in doc)
+
+
+t
+
+--------------------------------------------------------------------------------------
+
+
+
+
