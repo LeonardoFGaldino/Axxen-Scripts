@@ -1,0 +1,3 @@
+*Executar ipython do venv
+
+source /home/samba/caio/scripts/extrair_produtos_cfes/.venv/bin/activate

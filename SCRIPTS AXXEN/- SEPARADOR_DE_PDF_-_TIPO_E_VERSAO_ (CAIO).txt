@@ -1,0 +1,41 @@
+SEPARADOR DE PDF - TIPO E VERSÃO   
+
+
+import shutil
+import fitz
+import os
+import re
+
+
+from glob import glob
+def separa_doc(regex, caminho):
+    texto = '\n'.join(p.get_text() for p in fitz.open(caminho))
+    match = re.search(regex, texto)
+    if match:
+        nome_pasta = match.groups()[0]
+        if not os.path.exists(nome_pasta):
+            os.mkdir(nome_pasta)
+        shutil.move(caminho, nome_pasta)
+  
+  
+ 
+ls
+os.getcwd()
+cd "Desktop/Declaração de compensação"
+ls
+
+
+files = glob('*.pdf')
+
+for f in files:
+    separa_doc(r'(?<=Tipo de Documento)\:?[\s\t]*([^\n]*)', f)
+
+cd "Declaração de Compensação"
+
+files = glob('*.pdf')
+  
+for f in files:
+    separa_doc(r'PER\/?DCOMP[\s\t]*(\d.\d[ab]?)', f)
+
+
+

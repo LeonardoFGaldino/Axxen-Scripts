@@ -1,0 +1,9 @@
+PARA ZIPAR PASTAS (CADA PASTA)
+
+for folder in *; do zip -rT5 "$folder.zip" $folder; done
+
+
+
+*zipa todas as pastas
+
+ for dir in *; do zip -r "$dir.zip" "$dir";done

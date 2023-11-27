@@ -1,0 +1,41 @@
+from glob import glob
+from math import floor, ceil
+import shutil
+import os
+
+
+
+
+def move_arquivos(chunks):
+   ...:     for idx, lista in enumerate(lista_dividida):
+   ...:          nome_pasta = f'arquivo_{idx}'
+   ...:          if not os.path.exists(nome_pasta):
+   ...:              os.mkdir(nome_pasta)
+   ...:          for arquivo in lista:
+   ...:              shutil.move(arquivo, os.path.join(nome_pasta, os.path.basename(arquivo)))
+
+
+
+ def divide_lista(chunks, files):
+   ...:              arquivos = []
+   ...:              qnt_arquivo_por_chunk = ceil(len(files)/chunks)
+   ...:              for chunk in range(chunks):
+   ...:                  inicio = chunk * qnt_arquivo_por_chunk
+   ...:                  fim = (chunk+1) * qnt_arquivo_por_chunk
+   ...:                  if fim > len(files):
+   ...:                      arquivos.append(files[inicio:])
+   ...:                  else:
+   ...:                      arquivos.append(files[inicio:fim])
+   ...:              return arquivos
+
+
+
+files = glob('**/*.xml', recursive=True)
+
+
+#escolher a quantidade de pastas a ser dividida
+
+lista_dividida = divide_lista(20, files) 
+
+
+move_arquivos(lista_dividida)
