@@ -1,0 +1,4 @@
+Exemplo de substituição:
+
+=SUBSTITUIR(SUBSTITUIR(B2;"\\10.14.1.10";"/home/samba");"\"; "/")
+

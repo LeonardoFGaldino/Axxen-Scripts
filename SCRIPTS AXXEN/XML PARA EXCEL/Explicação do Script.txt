@@ -1,0 +1,16 @@
+SCRIPT XML E DB CLASSIFICAÇÃO COMPLETO:
+
+
+Script pega os dados dos xml de acordo com as "TAGS" e jogar para uma planilha em excel
+
+
+
+
+PARA BANCO DE DADOS: DB
+
+
+Converter o arquivo DB em CSV no DB Browser (SQLite)
+
+jogar os dados DB convertidos em CSV na planilha
+
+

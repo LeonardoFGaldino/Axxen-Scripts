@@ -1,0 +1,59 @@
+Ele zipa todos os xml e separa eles por divisão"
+
+
+*obs: da pra adaptar ele para separar zips por ano e etc..
+
+
+
+
+
+-------------------------------------------------------------------------
+SCRIPT DO CAIO:
+
+
+for chunk in range(10):
+    ...:     inicio = chunk*100000
+    ...:     fim = (chunk+1)*100000
+    ...:     if fim > len(files):
+    ...:         arquivos.append(files[inicio:])
+    ...:     else:
+    ...:         arquivos.append(files[inicio:fim])
+
+
+
+
+-----------------------------------------------------------
+
+sum(len(l) for l in lista_dividida)
+
+
+def divide_lista(chunks, files):
+             arquivos = []
+             qnt_arquivo_por_chunk = ceil(len(files)/chunks)
+             for chunk in range(chunks):
+                 inicio = chunk * qnt_arquivo_por_chunk
+                 fim = (chunk+1) * qnt_arquivo_por_chunk
+                 if fim > len(files):
+                     arquivos.append(files[inicio:])
+                 else:
+                     arquivos.append(files[inicio:fim])
+             return arquivos
+
+
+lista_dividida = divide_lista(12, files)
+
+CRIAR OS ARQUIVOS SEPARADOS
+
+for name, lista in enumerate(lista_dividida):
+         nome_pasta = f'arquivo_{name}'
+         if not os.path.exists(nome_pasta):
+             os.mkdir(nome_pasta)
+         for arquivo in lista:
+             shutil.move(arquivo, os.path.join(nome_pasta, os.path.basename(arquivo)))
+
+
+
+
+PARA ZIPAR PASTAS (CADA PASTA)
+
+for folder in *; do zip -rT5 "$folder.zip" $folder; done

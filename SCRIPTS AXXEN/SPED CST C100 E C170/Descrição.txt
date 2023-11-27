@@ -1,0 +1,15 @@
+Para cada linha do SPED |C100|0| encontrar o |C170| 
+
+Exemplo da linha: |C170|1|016446||3|UN|29,97|1,53|0|000|1556|1556|28,47|20|5,69|0|0|0|0|||0|0|0|50|28,47|1,65
+
+Se o CFOP for diferente de |5102|1102|1403|2102|2403| troque o código cst na posição 25° para |53| sempre, para todos
+
+Dica: o CFOP fica sempre no 11° Pipe. exemplo da linha: |1556|
+
+
+
+SÓ ALTERAR DE ACORDO COM A CST QUE DESEJA PUXAR!!
+
+
+
+

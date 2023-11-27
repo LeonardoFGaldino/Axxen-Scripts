@@ -1,0 +1,16 @@
+Podemos mover os dados especificos das planilhas por posição da coluna usando (-f):
+
+*Arquivo para pasta:
+
+while read file; do mv "$(echo $file | cut -d ";" -f3)" t_2022/; done<t1_2022.csv  
+
+
+
+*Mas antes usar o separador da flag r linux/windows:
+
+sed -i 's/\r//g' t1_2022.csv.
+
+
+*Foi usado o separador por trimestre filtrado pelo excel!
+
+
