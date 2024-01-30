@@ -1,0 +1,55 @@
+Criação do Ambiente e Pastas:
+
+.Venv  (python -m venv ../venv)     (python.exe -m venv venv)
+Venv
+xml_parser
+requirements.txt  (generateDS>=2.43.3,<2.44)
+
+
+
+install:
+
+ pip install -r .\requirements.txt --no-cache-dir  
+
+
+
+Baixar os Esquemas XML: https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=BMPFMBoln3w=
+
+Caminho completo até o XSD: C:\Users\Admin\Documents\nfe-parser\xml_parser\xsd\02.01.2019
+
+
+
+
+
+dentro do ambiente:
+
+.\venv\Scripts\python.exe .\venv\Scripts\generateDS.py -o nfe_parser.py .\xml_parser\xsd\02.01.2019\procNFe_v4.00.xsd
+
+ 	"nfe_parser" ---> nome do arquivo
+	"procNFe_v4.00.xsd" --> xds escolhido
+
+
+
+
+Depois de Criar o .py:
+
+
+
+import nfe_parser (arquivo.py criado)
+
+
+parsed = nfe_parser.parse('35210816585185000183550010000481591468095242-procNfe.xml')
+
+
+In [4]: parsed.NFe.infNFe.Id
+Out[4]: 'NFe35210816585185000183550010000481591468095242'
+
+
+In [5]: parsed.NFe.infNFe.versao
+Out[5]: '4.00'
+
+
+In [6]: parsed.NFe.infNFe.ide.dhEmi
+Out[6]: '2021-08-23T16:38:32-03:00'
+
+
