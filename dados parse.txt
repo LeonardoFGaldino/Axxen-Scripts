@@ -1,0 +1,124 @@
+normal:
+
+nfe = nfe_parser2023
+
+cte = cte_parser*
+
+
+
+
+evento:
+
+cteevento = cte_evento_parser*
+
+nfeevento = nfe_evento
+
+
+
+nfe incompleto:
+
+nfee = nfe*
+
+res:
+
+resNFe = resNFe
+
+resEventoNFe = resEvento*
+
+
+
+
+
+XML: 
+
+NFe_Evento
+CTe
+
+
+
+-----------------------------------------------------
+
+ import os
+   ...: 
+   ...: pasta_xml = "C:/Users/Admin/Desktop/xmls_leve"
+   ...: nfe = []
+   ...: 
+   ...: for arquivo_xml in glob('C:/Users/Admin/Desktop/xmls_leve/**/*.xml', recursive=True):
+   ...:     if arquivo_xml.endswith('.xml'):
+   ...:         caminho_completo = os.path.join(pasta_xml, arquivo_xml)
+   ...: 
+   ...:         try:
+   ...:             parsed = nfe_parser2023.parse(caminho_completo)
+   ...:             if parsed.NFe is None:
+   ...:                 nfe.append(caminho_completo)
+   ...: 
+   ...:         except Exception as e:
+   ...:             print(str(e))
+   ...:             nfe.append(caminho_completo)
+
+------------------------------------------------------
+
+rodar script:
+
+
+nfe em andamento*
+
+cte*
+
+cte_Proc*
+
+nfeevento*
+
+
+
+
+
+-----------------------------------------------------
+interseção de duas listas:
+
+
+l3 = []
+
+for arquivo in cte:
+        if arquivo in nfe:
+            l3.append(arquivo)
+
+
+for arquivo in nfe:
+        if arquivo in cte:
+            l3.append(arquivo)
+
+
+
+------------------------------------------------------
+interseção de quatro listas:
+
+l4 = []
+
+	  for arquivo in nfe:
+    ...:     ...:     if arquivo in cte and arquivo in nfeevento and arquivo in cteevento:
+    ...:     ...:        l4.append(arquivo)
+    ...:
+
+In [23]:
+    ...:  for arquivo in cte:
+    ...:     ...:     if arquivo in nfe and arquivo in nfeevento and arquivo in cteevento:
+    ...:     ...:        l4.append(arquivo)
+    ...:
+
+In [24]:
+    ...:  for arquivo in nfeevento:
+    ...:     ...:     if arquivo in nfe and arquivo in cte and arquivo in cteevento:
+    ...:     ...:        l4.append(arquivo)
+    ...:
+
+In [25]:
+    ...:  for arquivo in cteevento:
+    ...:     ...:     if arquivo in nfe and arquivo in cte and arquivo in nfeevento:
+    ...:     ...:        l4.append(arquivo)
+
+
+
+
+
+

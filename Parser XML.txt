@@ -40,6 +40,7 @@ import nfe_parser (arquivo.py criado)
 
 parsed = nfe_parser.parse('35210816585185000183550010000481591468095242-procNfe.xml')
 
+(a partir da segunda tag)
 
 In [4]: parsed.NFe.infNFe.Id
 Out[4]: 'NFe35210816585185000183550010000481591468095242'
@@ -51,5 +52,30 @@ Out[5]: '4.00'
 
 In [6]: parsed.NFe.infNFe.ide.dhEmi
 Out[6]: '2021-08-23T16:38:32-03:00'
+
+
+
+
+-----------------------------------------------------------------------------------
+iterar para rodar parse evento sobre todos os xmls
+
+
+import os
+    ...:
+    ...: pasta_xml = "Z:/xmls/"
+    ...: evento = []
+    ...:
+    ...: for arquivo_xml in glob.glob('Z:/xmls/**/*.xml', recursive=True):
+    ...:     if arquivo_xml.endswith('.xml'):
+    ...:         caminho_completo = os.path.join(pasta_xml, arquivo_xml)
+    ...:
+    ...:         try:
+    ...:             parsed = procEventoNFe_parser.parse(caminho_completo)
+    ...:             if parsed.evento is None:
+    ...:                 evento.append(caminho_completo)
+    ...:
+    ...:         except Exception as e:
+    ...:             print(str(e))
+    ...:             evento.append(caminho_completo)
 
 
