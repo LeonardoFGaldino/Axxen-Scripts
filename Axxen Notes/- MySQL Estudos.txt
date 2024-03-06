@@ -1,0 +1,233 @@
+*as linhas são as tuplas ou registros
+*as colunas são campos ou atributos
+
+*alter table altera coluna
+
+
+
+adicionar dados:
+
+insert into teste value
+
+('1', 'Thiago', '22')
+
+--------------------------------------------
+
+deletar um registro:
+
+DELETE FROM pessoas WHERE nome = 'Maria';
+
+
+-------------------------------------------
+
+-- alterar tabela para adicionar
+alter table pessoas
+add profissao varchar(10) after nome;
+
+-- alterar tabela para remover
+alter table pessoas
+drop profissao;
+
+-- alterar quantidade de varchar
+alter table pessoas
+modify profissao varchar(20);
+
+-- alterar nome da coluna
+alter table pessoas
+change profissao prof varchar(20);
+
+-- alterar nome da tabela
+alter table Tabelinha
+rename to pessoas;
+
+desc pessoas;
+
+select * from pessoas;
+
+--------------------------------------------
+na criação da tabela:
+
+alter table cursos
+add primary key (idcurso);
+
+
+-------------------------------------------
+
+Alterar os registros:
+
+update cursos
+set ano = '2015', nome = 'Java'
+where idcurso = '5'
+limit 1;
+
+para deletar:
+
+delete from cursos
+where ano = '2000';
+
+-------------------------------------------
+
+USANDO O SELECT:
+
+-- select pode filtrar as tabelas
+select ano, nome, carga from cursos;
+
+
+-- podemos ordenar
+order by ano, nome;
+
+
+-- podemos selecionar valores 'entre' uma faixa usando o 'between'
+select nome, ano from cursos
+where ano between 2014 and 2016 
+order by ano desc, nome asc;
+
+
+-- podemos selecionar valores 'específicos' usando o 'in'
+select nome, descrição, ano from cursos
+where ano in (2014, 2016)
+order by ano; 
+
+-------------------------------------------
+
+COMANDO LIKE:
+
+-- procurar nomes que começam com 'P'
+-- where nome like 'P%'
+
+-- procurar nomes que terminam com 'P'
+-- where nome like '%P';
+
+-- procurar nomes que não começam com 'A'
+-- where nome not like 'a%';
+
+-- procurar nomes que começam com 'ph' e termiman com 'p'
+-- where nome like 'ph%p';
+ 
+-- procurar nomes que começam com 'ph e termiman com 'p' e qualquer valor no final
+-- where nome like 'ph%p%';
+
+-- procurar nomes que começam com 'ph e termiman com 'p' e apenas numero no final
+-- where nome like 'ph%p_';
+
+--------------------------------------------------------
+
+COMANDO DISTINCT:
+
+select distinct nacionalidade from gafanhotos
+
+*ele vai distinguir todas as nacionalidades dos gafanhotos sem repetir. (filtro)
+
+--------------------------------------------------------
+
+-- Função de Agregação (mostra penas 1 resultado)
+
+
+-- contar o total dos cursos:
+-- select count(*) from cursos;
+
+-- contar o total por filtro:
+-- select count(*) from cursos where carga > 40;
+
+-- procurar o máximo e mínimo de alguma coisa com filtro:
+-- select nome, max(totaulas) from cursos where ano = '2016';
+-- select nome, min(totaulas) from cursos where ano = '2016';
+
+-- pode somar e tirar a média:
+-- select sum(totaulas) from cursos where ano = '2016';
+-- select avg(totaulas) from cursos where ano = '2016';
+
+---------------------------------------------------------
+
+
+para saber a quantidade use o Agrupamento:
+
+
+
+-- select totaulas, count(*) from cursos
+-- group by totaulas
+-- order by totaulas;
+
+-- select totaulas, count(*) from cursos
+-- group by totaulas
+-- order by totaulas;
+
+
+-- Dificil Estudar
+
+
+-- select ano, count(*) from cursos
+-- group by ano
+-- having count(ano) >= 5
+-- order by count(*);
+
+----------------------------------------------------------
+
+TABELA RELACIONAL (CHAVES ESTRANGEIRAS)
+
+desc gafanhotos;
+alter table gafanhotos add column cursopreferido int;
+
+alter table gafanhotos 
+add foreign key (cursopreferido)
+references cursos(idcurso);  
+
+select * from gafanhotos;
+select * from cursos;
+
+update gafanhotos set cursopreferido = '6' where id = '1';
+
+-----------------------------------------------------------
+
+JOIN:
+
+*Sempre que for utilizar o JOIN precisa utilizar o ON para relacionar
+
+SELECT gafanhotos.nome, cursos.nome, cursos.ano FROM gafanhotos JOIN cursos ON cursos.idcurso = gafanhotos.cursopreferido;
+
+LEFT JOIN:
+
+FROM gafanhotos LEFT JOIN cursos
+
+*De todos os gafanhotos, vão filtrar apenas os cursos
+
+RIGHT JOIN:
+
+*De todos os cursos, vão filtrar apenas os gafanhotos
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

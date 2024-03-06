@@ -1,0 +1,22 @@
+- VER SE A REQUISIÇÃO FUNCIONA SEM DATA E HEADERS
+
+*dica: url já com data
+
+
+In [4]: uri = 'https://consulta.trf4.jus.br/trf4/controlador.php?acao=consulta_processual_valida_pesquisa&txtOrigemPesquisa=1&seq=&selForma=CP&txtValor=74017930000194&txtChave=&selOrigem=TRF&chkMostrarBaixados=S&txtDataFase=01%2F01%2F197 
+   ...: 0'
+
+In [5]: cnpj = '74017930000194'
+
+In [6]: uri = f'https://consulta.trf4.jus.br/trf4/controlador.php?acao=consulta_processual_valida_pesquisa&txtOrigemPesquisa=1&seq=&selForma=CP&txtValor={cnpj}&txtChave=&selOrigem=TRF&chkMostrarBaixados=S&txtDataFase=01%2F01%2F1970'      
+
+In [7]: uri
+Out[7]: 'https://consulta.trf4.jus.br/trf4/controlador.php?acao=consulta_processual_valida_pesquisa&txtOrigemPesquisa=1&seq=&selForma=CP&txtValor=74017930000194&txtChave=&selOrigem=TRF&chkMostrarBaixados=S&txtDataFase=01%2F01%2F1970'     
+
+In [8]: sessid = 'orp17a6r8mmhkieg4vadnjvk9b'       #cookie ja com captcha feito
+
+In [9]: cookies = {'PHPSESSID': sessid}
+
+In [10]: res = req.get(uri, cookies=cookies, timeout=7)     #se tiver data e headers é so adicionar
+
+In [11]: res.content

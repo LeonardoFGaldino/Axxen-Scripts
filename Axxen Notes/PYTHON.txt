@@ -1,0 +1,83 @@
+Iniciante:
+
+*1 Introdução e Sintaxe Básica:
+
+Compreender o que é Python e como instalá-lo.
+Sintaxe básica: variáveis, tipos de dados, operadores, expressões.
+
+*2 Controle de Fluxo:
+
+Estruturas condicionais (if, else, elif).
+Loops (for, while).
+Controle de fluxo de exceção (try, except).
+
+*3 Estruturas de Dados:
+
+Listas, tuplas, conjuntos, dicionários.
+Operações básicas em estruturas de dados.
+
+*4 Funções e Modularidade:
+
+Definindo funções.
+Parâmetros e argumentos.
+Escopo de variáveis.
+Módulos e importação.
+
+*5 Orientação a Objetos Básica:
+
+Classes e objetos.
+Atributos e métodos.
+Encapsulamento, herança, polimorfismo.
+
+Intermediário:
+
+1 Trabalhando com Arquivos e Strings:
+
+Leitura e escrita de arquivos.
+Manipulação de strings e expressões regulares.
+
+2 Compreensão de Listas (List Comprehensions) e Geradores:
+
+List comprehensions.
+Generators e iterators.
+
+3 Trabalhando com Dados em Python:
+
+Introdução a bibliotecas como NumPy e Pandas para manipulação de dados.
+
+4 Testes e Debugging:
+
+Escrevendo testes usando unittest ou pytest.
+Estratégias de debugging.
+
+5 Trabalhando com APIs e Web:
+
+Requisições HTTP em Python.
+Introdução a Flask ou Django para desenvolvimento web.
+
+Avançado:
+
+1 Programação Funcional:
+
+Funções lambda, map, filter, reduce.
+Closures e decoradores.
+
+2 Manipulação Avançada de Dados:
+
+Uso avançado de bibliotecas como Pandas, NumPy e SciPy.
+Visualização de dados com bibliotecas como Matplotlib e Seaborn.
+
+3 Bancos de Dados:
+
+Conexão com bancos de dados SQL ou NoSQL.
+Interação com bancos de dados usando Python.
+
+4 Concorrência e Paralelismo:
+
+Threads e processos.
+Uso de asyncio para programação assíncrona.
+
+5 Desenvolvimento Web Avançado:
+
+Frameworks avançados como Django REST framework.
+Autenticação e autorização em APIs REST.

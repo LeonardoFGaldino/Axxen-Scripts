@@ -1,0 +1,228 @@
+P:\13 - PROJETOS\014.001\PREVIDENCIARIO\MATRIZ 05.948.5530001-94\DOCUMENTOS\XML - ESOCIAL
+
+
+esocial
+
+base:
+codigos de receitas puxar (todos)
+
+
+resumo da folha de pagamento:
+
+puxar base de calculo valor
+
+ler o que pagou e informou
+
+declaração completa do ecac tem que bater com o esocial
+
+TOTALIZADORES SAO EM XML
+
+
+passoa a posso:
+
+
+1º classe para cada layout com expressao regular
+
+com a expressao a regular de cada layout usa o parse]
+
+
+
+leiaute:
+
+registros de evento
+
+5001 (Informações das Contribuições Sociais por Trabalhador)
+
+
+
+*totalizador são informações ja consolidadas
+
+----------------------------------------------------------------------------------
+
+27/11/2023
+
+
+20051	Sebrae a cargo da empresa sobre a remuneração do segurado empregado ou trabalhador avulso
+
+ECAC VEM COM "00"
+
+ESOCIAL COM "51"
+
+
+
+----------------------------LEVANTAMENTO E CONSOLIDAÇÃO DO CRÉDITO --------------------------------------------
+
+OBJETIVO: BATER BASEs
+
+
+*EVOLUÇÃO DO PROCESSO
+
+   LER O XML COM SCRIPT
+
+   	"ESPECTATIVA" DE CRÉDITO (OUTRO SCRIPT PARA LEVANTAMENTO DE CRÉDITO) *CONFIRMAR SE TA PRONTO
+
+	1°BATER BASEs
+	*SO PODE LEVANTAR OQ TA PAGO
+
+		CONFRONTO COM OS PAGAMENTOS (SE FOI PAGO OU NÃO)
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------
+
+/ DISONERADO /
+
+pagar valro de contruibuiçao do inss
+
+nao ten como vincular diretamente
+não posso pedir restituilçao
+
+fica sem beneficiio
+
+ex: só sobre o salario
+
+
+comaprasr pra ver se a folah ta cheia
+
+se a folha ofi dinonerada ou não
+
+se achar, não comapra com o ecas pq a empresa é desonerada 
+
+
+
+----------------------------------------------------------------------------------
+
+
+usar script ja feito para comparar bonitinho e organizar e planejar!!
+
+aprende com usaer
+
+entender o processo
+
+
+
+-----------------------------------------------------------------------------------
+
+
+os codigos para ver se o somatorio esta batendo|
+
+
+tabela do ecasc 1 e tabela do esocial 2 OU (gerar1 só)
+
+comparar com um terceiro 3
+
+gerar infimrlçao do beneficio
+
+
+mes a mes e gerar os ultimos 5 anos
+
+------------------------------------------------------------------------------------/
+04/12
+
+
+PROBLEMA NO SCRIPT
+
+CODIGO 113801 DANDO 3 MILHOES NO SCRIPT 10/2023
+
+ELE É DISONERADO NO ECAC
+
+
+*possivel solução (script)
+
+    PUXAR OS 13° COM BASE EM DEZEMBRO
+
+	COSIGO DO 13° É DIFERENTE E NÃO VAI DAR CONFLITO
+
+converter data txt para periodo (2022 para 12/2022)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+04/12
+
+
+* SCRIPT JÁ ESTÁ PRONTO
+
+		
+
+		
+		
+
+
+		
+
+
+			
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

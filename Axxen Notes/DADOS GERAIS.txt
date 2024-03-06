@@ -1,0 +1,55 @@
+Niveis de Importância de Script:
+
+1° Previdênciário
+2° Perdcomps modelos
+3° Jurídico (processos site)
+
+-------------------------------------------------------
+
+- Automação dos Perdcomps ECAC com o PlayStatic
+
+
+
+- Melhorar com automação de sites:
+
+Requests
+Selenium
+BeautySoap
+
+
+- Melhorar no Excel pedindo informações sobre os erros:
+
+
+
+- Aprender a usaro PowerBI (Gráficos)
+
+
+
+- Aprender o processos da empresa para automação:
+
+Jurídico
+
+
+- Aprender sobre o Monday para automação:
+
+*Fabiana disse que vai criar uma conta pra a gnt
+
+--------------------------------------------------------
+
+INFORMÁTICA:
+
+- Carregador do notebook da Marcela!
+- Verificar virus no pc de todo mundo (painel de controle) e fazer varedura
+- Verificar se o pc da Maria Julia esta conectado do dominio da jr
+
+
+
+
+
+
+
+
+
+
+
+

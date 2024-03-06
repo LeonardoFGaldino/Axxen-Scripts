@@ -1,0 +1,37 @@
+PYTHON:
+
+- Csv *
+- SPED py
+- XML py
+
+
+SQL:
+
+- DB * 
+- Select *
+- Like *
+- Join *
+
+
+BASH:
+
+- Comandos
+
+
+REDE:
+
+- Configurar Roteador (ponto de acesso) *
+
+Ele estende áreas maiores do roteador principal
+
+- Configurações de IP 
+
+
+SERVIDOR SAMBA:
+
+
+
+-----------------------------------------
+
+Aprender a usar SQL no M.A
+ 

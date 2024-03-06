@@ -1,0 +1,27 @@
+dwlite3 função 
+
+
+from dataclasses import dataclass
+
+In [3]: @dataclass
+   ...: class CnpjRow:
+   ...:     cnpj:str
+   ...:     cnae_primario:str
+   ...:     cnaes_secundarios:str
+   ...:
+   ...:     def __str__(self):
+   ...:         rows = [['1', self.cnpj, self.cnae_primario]]
+   ...:         if self.cnaes_secundarios:
+   ...:             rows.extend([['0', self.cnpj, cnae] for cnae in self.cnaes_secundarios.split(',')])
+   ...:         rows = [';'.join(r) for r in rows]
+   ...: #        rows.insert(0, '')
+   ...:         rows.append('')
+   ...:         return '\n'.join(rows)
+   ...:
+
+In [4]: def extract_row(row):
+   ...:     fields = row.split(';')
+   ...:     cnpj = ''.join(fields[:3]).replace('"', '')
+   ...:     cnae_1 = fields[11].replace('"', '')
+   ...:     cnae_2 = fields[12].replace('"', '')
+   ...:     return CnpjRow(cnpj, cnae_1, cnae_2)

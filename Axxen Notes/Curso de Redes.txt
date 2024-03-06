@@ -1,0 +1,35 @@
+Curso de Redes:
+
+Wifi Inspector
+
+- Wifi analyzer (Android)
+- Xirrus (PC)
+
+*Tecnologia WDS tranforma todas as redes em uma
+*Filtro de mac é para controlar quem acessa ou não a sua rede
+
+-------------------------------------------------------------------------
+MAC Address:
+
+serve para identificar qual maquina está conectada na rua rede.
+
+parar descobrir o nome da maquina use o site: https://macvendors.com/
+
+
+TOOLS > PING > IP:
+
+TTL = 128 (WINDOWS)
+TTL = 64 MIKROTIK (GATEWAY)
+TTL = 255 (LINUX)
+
+
+ arp -a 10.14.1.37 para descobrir MAC ADDRESS (TERMINAL)
+
+
+
+
+
+
+
+
+

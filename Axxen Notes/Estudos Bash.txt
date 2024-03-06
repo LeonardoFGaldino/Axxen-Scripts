@@ -1,0 +1,12 @@
+- cd
+
+- ls
+
+- cat
+
+- head
+
+- tail
+
+
+
