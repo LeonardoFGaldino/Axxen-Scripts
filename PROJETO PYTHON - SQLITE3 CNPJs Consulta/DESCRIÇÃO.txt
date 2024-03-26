@@ -1,0 +1,41 @@
+cnpj_logic + cnpj_classe = Scrip_Completo (ele classifica CNPJ, SIMPLES, CLASSIFICAÇÃO)
+
+cnpj_logic: (Ele diz se é simples ou não de acordo com o CNPJ e DATA utilizando a base "simples_nacional.sqlite3")
+
+cnpj_classe: (ele faz classificação de ATACADISTA, VAREJISTA, INDUSTRIA de acordo com o CNPJ utilizando a base "db_file2.db")
+
+
+FOI UTILIZADO AS BASES CSV:
+
+"F.K03200$W.SIMPLES.CSV.D40113" PARA cnpj_logic = "simples_nacional.sqlite3"
+
+"K3241.K03200Y1.D40210.ESTABELE" PARA cnpj_classe = "db_file2.db"
+
+
+banco de dados = simples_nacional.sqlite3
+
+tabelas criadas:
+
+CREATE TABLE simples (cnpj, opcao_simples, simples_inicio, simples_fim, opcao_mei, mei_inicio, mei_fim);
+CREATE INDEX idx_cnpj ON simples(cnpj);
+
+
+banco de dados = db_file2.db
+
+
+tabelas criadas:
+
+CREATE TABLE cnae (codigo TEXT, descricao TEXT, classe TEXT);
+CREATE TABLE cnpj (codigo TEXT, classe TEXT);
+CREATE TABLE cnpj_classe (codigo TEXT, classe TEXT);
+
+tabela final:
+
+CREATE TABLE cnpj (codigo TEXT, classe TEXT);   (cnpj com junção tirada do cnae)
+CREATE INDEX "codigo_idx" ON cnpj(codigo);
+
+
+inserir os dados para o cnpj concatenando a classe sem repetir: 
+
+INSERT INTO cnpj SELECT codigo, GROUP_CONCAT(classe) FROM (SELECT DISTINCT codigo, classe FROM cnpj_classe WHERE classe IS NOT NULL GROUP BY codigo, classe) WHERE classe IS NOT NULL GROUP BY codigo;
+

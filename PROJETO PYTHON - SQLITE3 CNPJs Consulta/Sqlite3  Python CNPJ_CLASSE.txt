@@ -1,0 +1,106 @@
+Sqlite3 / Python
+
+Cnpj e classificação no banco de dados para excel
+
+baixar estabelecimentos
+
+criar banco de dados
+
+
+criar arquivo cnae_cnpj e inserir dados neles (para cada arquivo) com:
+
+ @dataclass
+   ...: class CnpjRow:
+   ...:     cnpj:str
+   ...:     cnae_primario: str
+   ...:     cnaes_secundarios: str
+   ...:     def __str__(self):
+   ...:         rows = [['1', self.cnpj, self.cnae_primario]]
+   ...:         if self.cnaes_secundarios:
+   ...:             rows.extend([['0', self.cnpj, cnae] for cnae in self.cnaes_secundarios.split(',')])
+   ...:         rows = [';'.join(r) for r in rows]
+   ...:         rows.append('')
+   ...:         return '\n'.join(rows)
+   ...:
+
+In [5]: def extract_row(row):
+   ...:     fields = row.split(';')
+   ...:     cnpj = ''.join(fields[:3]).replace('"', '')
+   ...:     cnae_1 = fields[11].replace('"', '')
+   ...:     cnae_2 = fields[12].replace('"', '')
+   ...:     return CnpjRow(cnpj, cnae_1, cnae_2)
+   ...:
+
+In [6]: file = open('cnae_cnpj_0.csv', 'w', encoding='latin-1', errors='replace')
+
+In [7]: estabelecimentos = open('Estabelecimentos0/K3241.K03200Y0.D40210.ESTABELE', encoding='latin-1', errors='replace')
+
+In [8]: for row in estabelecimentos:
+   ...:     parsed_row = extract_row(row)
+   ...:     file.write(str(parsed_row))
+
+
+
+
+criar tabelas:
+
+CREATE TABLE cnae (codigo TEXT, descricao TEXT, classe TEXT);
+CREATE TABLE cnpj (codigo TEXT, classe TEXT);
+CREATE TABLE cnpj_classe (codigo TEXT, classe TEXT);
+
+
+.import cnaes.csv cnae 
+
+
+inserir dados na cnpj_classe:
+
+
+import sqlite3
+
+from glob import glob
+
+files = glob('cnae_cnpj_*.csv', recursive=True)
+
+classes = dict(sqlite3.connect('db_file.db').execute('SELECT codigo, classe FROM cnae;').fetchall())
+
+ with sqlite3.connect('db_file.db') as conn:
+   ...:     for fname in files:
+   ...:         with open(fname) as f:
+   ...:             for row in f:
+   ...:                 primario, cnpj, cnae = row.split(';')
+   ...:                 conn.execute(f'INSERT INTO cnpj_classe VALUES (\'{cnpj}\', \'{classes[cnae.strip()] if cnae.strip() in classes else ""}\');')
+   ...:
+   ...:     conn.commit()
+
+
+inserir dados na tabela cnpj e concatenando cnpj + classe:
+
+
+
+#SELECT codigo, GROUP_CONCAT(classe) FROM (SELECT DISTINCT codigo, classe FROM cnpj_classe WHERE cnpj_classe.codigo = '01131570000264' AND classe IS NOT NULL GROUP BY codigo, classe) GROUP BY codigo;
+
+#SELECT codigo, GROUP_CONCAT(DISTINCT classe) FROM cnpj_classe WHERE classe IS NOT NULL GROUP BY codigo;
+
+
+
+INSERT INTO cnpj SELECT codigo, GROUP_CONCAT(classe) FROM (SELECT DISTINCT codigo, classe FROM cnpj_classe WHERE classe IS NOT NULL GROUP BY codigo, classe) WHERE classe IS NOT NULL GROUP BY codigo;
+
+
+
+para melhorar o desempenho: 
+
+no final foi dropado as tableas cnpj_classe e cnae e criado o "CREATE INDEX "codigo_idx" ON cnpj(codigo);"
+
+expotação:
+
+
+.mode csv
+.output nome_DO_ARQUIVO
+SELECT * FROM cnpj_classe;
+.output
+
+
+
+
+
+
