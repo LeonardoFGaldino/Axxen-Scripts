@@ -1,0 +1,25 @@
+chave_c100 = pega as chaves do C100
+
+chaves_xml = pega as chaves do XML
+
+Banco de dados = confronto.db
+
+
+sqlite> .schema
+CREATE TABLE chaves_xml (chave TEXT);
+CREATE TABLE chaves_sped (chave TEXT);
+CREATE TABLE chaves_nao_comuns (chave TEXT);
+CREATE TABLE chaves_nao_comuns (chave TEXT);
+
+
+inserir dados na tablea:
+
+.mode csv
+. separator ','
+.import arquivo.txt table
+SELECT * FROM table;
+
+fazer a interceção dos dados chaves_xml e chaves_sped sem repetir e inserir em chaves_nao_comuns:
+
+
+INSERT INTO chaves_nao_comuns (chave) SELECT DISTINCT chave FROM chaves_xml EXCEPT SELECT DISTINCT chave FROM chaves_sped;
