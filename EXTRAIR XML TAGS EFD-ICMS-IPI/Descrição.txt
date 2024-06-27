@@ -1,0 +1,9 @@
+Script extrai os resultados da tags específicas para uma planilha excel.
+
+*a tag da chave é a única diferente. pois o txt dela é diferente!
+
+
+
+
+
+
